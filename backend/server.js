@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import workoutRouter from "./routes/workoutRoutes.js";
 import mongoose from "mongoose";
+import cors from 'cors'
 
 
 
@@ -9,6 +10,7 @@ import mongoose from "mongoose";
 dotenv.config();
 //maak een express applicatie
 const app = express();
+app.use(cors())
 
 //middelware om JSON-verzoeken te parsen 
 app.use(express.json());
