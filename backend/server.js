@@ -3,8 +3,7 @@ import dotenv from "dotenv";
 import workoutRouter from "./routes/workoutRoutes.js";
 import mongoose from "mongoose";
 import cors from 'cors'
-
-
+import userRoutes from "./routes/userRoutes.js"
 
 // laat variabelen uit het .env-bestand
 dotenv.config();
@@ -17,7 +16,7 @@ app.use(express.json());
 
 //routes
 app.use("/api/workouts", workoutRouter);
-
+app.use('/api/user', userRoutes)
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
