@@ -7,6 +7,38 @@ const router = express.Router();
 router.get('/', getAllBooks);
 
 // Endpoint om een nieuw book toe te voegen
-router.post('/', createBook);
+router.post('/', 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+);
 
 export default router;
