@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bookRoutes from './routes/bookRoutes.js'
 import dotenv from 'dotenv';
+import taskRoutes from './routes/taskRoutes.js'
 
 //Laad variabelen uit het .env-bestand
 dotenv.config();
@@ -32,3 +33,4 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use('/books', bookRoutes);
+app.use('/tasks', taskRoutes);
